@@ -38,14 +38,14 @@ let baseMaps = {
 
 // 1. Add a 3rd layer group for the major earthquake data.
 let allEarthquakes = new L.LayerGroup();
-let allTechtonicPlates = new L.LayerGroup();
+let allTectonicPlates = new L.LayerGroup();
 let majorEarthquakes = new L.LayerGroup();
 
 
 // 2. Add a reference to the major earthquake group to the overlays object.
 let overlays = {
   "Earthquakes": allEarthquakes,
-  "Techtonic Plates": allTechtonicPlates,
+  "Tectonic Plates": allTectonicPlates,
   "Major Earthquakes": majorEarthquakes
 
 };
@@ -214,7 +214,7 @@ legend.onAdd = function() {
   d3.json(url1).then(function(data) {
     L.geoJson(data,{
         style: myStyle2
-    }).addTo(allTechtonicPlates);
-  allTechtonicPlates.addTo(map); 
+    }).addTo(allTectonicPlates);
+  allTectonicPlates.addTo(map); 
   });
 });
